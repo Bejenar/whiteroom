@@ -13,9 +13,13 @@ public class IndexController {
 	
 	@GetMapping("/")
 	public String index(Authentication authentication) {
-		
-		System.out.println(authentication.getAuthorities().toString());
-		
+		try {
+			System.out.println(authentication.getAuthorities().toString());
+			
+		}
+		catch (Exception ex){
+			System.out.println("fuck you");
+		}
 		return "index";
 	}
 	
