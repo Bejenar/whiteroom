@@ -42,11 +42,11 @@
 			<img src="img/logo.png" alt="">
 		</a>
 		<div class="header-right">
-			<a href="#" class="hr-btn">Help</a>
+			<a href="#" class="hr-btn" th:text = "#{index.help}">Help</a>
 			<span>|</span>
 			<div class="user-panel">
-				<a href="" class="login">Login</a>
-				<a href="" class="register">Create an account</a>
+				<a th:href="@{/login}" class="login" th:text = "#{index.login}">Login</a>
+				<a href="" class="register" th:text = "#{index.register}">Create an account</a>
 			</div> 
 		</div>
 	</header>
@@ -59,10 +59,10 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="hs-text">
-								<h2><span>Japanese</span> for everyone.</h2>
+								<h2><span th:text = "#{index.h2_1_japanese}" class ="first-word" >Japanese</span> <span th:text = "#{index.h2_1}"> for everyone</span></h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
-								<a href="#" class="site-btn">Play Now</a>
-								<a href="#" class="site-btn sb-c2">Log in</a>
+								<a th:href="@{/login}" class="site-btn" th:text = "#{index.h2.play-now}">Play Now</a>
+								<a th:href="@{/login}" class="site-btn sb-c2" th:text = "#{index.h2.login}">Log in</a>
 							</div>
 						</div>
 						<div class="col-lg-6">
@@ -78,10 +78,10 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="hs-text">
-								<h2><span>Play </span> learning Japanese</h2>
+								<h2><span class ="first-word" th:text = "#{index.h2_2_fw}">Play </span> <span th:text = "#{index.h2_2}"> learning Japanese </span> </h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
-								<a href="#" class="site-btn">Play Now</a>
-								<a href="#" class="site-btn sb-c2">Log in</a>
+								<a th:href="@{/login}" class="site-btn" th:text = "#{index.h2.play-now}">Play Now</a>
+								<a th:href="@{/login}" class="site-btn sb-c2" th:text = "#{index.h2.login}">Log in</a>
 							</div>
 						</div>
 						<div class="col-lg-6">
@@ -121,17 +121,17 @@
 					<div class="row">
 						<div class="col-sm-4">
 							<div class="footer-widget">
-								<h2>About us</h2>
+								<h2 th:text = "#{index.about}">About us</h2>
 								<ul>
-									<li><a href="">Our Story</a></li>
+									<li><a href=""> <span th:text = "#{index.story}">Our Story</span></a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="col-sm-4">
 							<div class="footer-widget">
-								<h2>&nbsp;</h2>
+								<h2><a th:href= "'?lang='+#{index.globe}"><i class="fa fa-globe fa-spin"></i></a></h2>
 								<ul>
-									<li><a href="">Contact Us</a></li>
+									<li><a href="" th:text = "#{index.contact}">Contact Us</a></li>
 								</ul>
 							</div>
 						</div>	
@@ -139,7 +139,7 @@
 							<div class="footer-widget">
 								<h2>&nbsp;</h2>
 								<ul>
-									<li><a href="">Fuck You</a></li>
+									<li><a href="" th:text = "#{index.fuck}">Fuck You</a></li>
 								</ul>
 							</div>
 						</div>							
@@ -148,13 +148,12 @@
 				<div class="col-xl-6 col-lg-5 order-lg-1">
 					<img src="img/logo.png" alt="">
 					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Whiteroom &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Whiteroom &copy;<script>document.write(new Date().getFullYear());</script> <span th:text = "#{index.copyright}">All rights reserved</span> | <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 					<div class="social-links">
-						<a href=""><i class="fa fa-instagram"></i></a>
-						<a href=""><i class="fa fa-facebook"></i></a>
-						<a href=""><i class="fa fa-twitter"></i></a>
-						<a href=""><i class="fa fa-youtube"></i></a>
+						<a href="https://vk.com/sspika" target = "_blank"><i class="fa fa-vk fa-spin"></i></a>
+						<a href="https://twitter.com/Ncjohn4" target = "_blank"><i class="fa fa-twitter fa-spin"></i></a>
+						<a href="https://www.youtube.com/channel/UCsfu0IH7MpjVEblNyXgkL6g" target = "_blank"><i class="fa fa-youtube fa-spin"></i></a>
 					</div>
 				</div>
 			</div>

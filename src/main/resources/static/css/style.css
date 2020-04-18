@@ -363,7 +363,7 @@ Hero section
 	opacity: 0;
 }
 
-.hs-item h2 span {
+.hs-item h2 span.first-word {
 	color: #C1EDCC;
 }
 
